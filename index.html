@@ -262,37 +262,42 @@
             '<div class="flex items-start justify-between gap-3 mb-3">' +
               '<div class="flex items-center gap-3">' +
                 '<div class="relative">' +
-                  '<img src="' + avatarSrc + '" onerror="this.src=\'' + getFallbackSvg(b.name) + '\';" alt="' + safeName + '" class="w-12 h-12 rounded-xl object-cover border border-slate-700">' +
-                  '<div class="absolute -bottom-1 -right-1 bg-teal-500 text-slate-950 font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center">' + (index + 1) + '</div>' +
+                  '<img src="' + avatarSrc + '" onerror="this.src=\'' + getFallbackSvg(b.name) + '\';" alt="' + safeName + '" class="w-14 h-14 rounded-2xl object-cover border-2 border-slate-700/80 shadow-md">' +
+                  '<div class="absolute -bottom-1 -right-1 bg-gradient-to-tr from-teal-500 to-amber-400 text-slate-950 font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-900 shadow">' + (index + 1) + '</div>' +
                 '</div>' +
                 '<div>' +
-                  '<h3 class="font-bold text-white text-sm line-clamp-1">' + safeName + '</h3>' +
-                  '<a href="https://instagram.com/' + safeUser + '" target="_blank" class="text-xs text-slate-400 hover:text-teal-400 transition flex items-center gap-1 mt-0.5" dir="ltr">' +
-                    '<i class="fa-brands fa-instagram text-teal-400"></i> @' + safeUser +
+                  '<h3 class="font-bold text-white text-base leading-tight line-clamp-1 mb-1">' + safeName + '</h3>' +
+                  '<a href="https://instagram.com/' + safeUser + '" target="_blank" class="text-xs text-teal-400/90 hover:text-teal-300 font-mono transition flex items-center gap-1" dir="ltr">' +
+                    '<i class="fa-brands fa-instagram text-teal-400 text-sm"></i> @' + safeUser +
                   '</a>' +
                 '</div>' +
               '</div>' +
-              '<div class="px-2 py-0.5 rounded bg-teal-950 border border-teal-800 text-teal-300 font-bold text-xs">' +
-                '⭐ ' + safeScore +
+              '<div class="text-left flex flex-col items-end">' +
+                '<div class="px-3 py-1.5 rounded-xl bg-gradient-to-l from-teal-950 via-slate-900 to-slate-900 border border-teal-500/40 shadow-sm text-center">' +
+                  '<div class="text-xs text-teal-400 font-bold mb-0.5">👥 فالوور</div>' +
+                  '<div class="text-lg font-black text-white leading-none tracking-tight">' + safeFollowers + '</div>' +
+                '</div>' +
               '</div>' +
             '</div>' +
-            '<p class="text-xs text-slate-400 line-clamp-2 leading-relaxed mb-3">' + safeBio + '</p>' +
-            '<div class="flex flex-wrap gap-1 mb-3">' +
-              '<span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-teal-400 font-medium">' + safeCat + '</span>' +
-              '<span class="px-2 py-0.5 rounded bg-slate-800/60 text-[10px] text-slate-400">' + safeNiche + '</span>' +
+            '<p class="text-xs text-slate-400 line-clamp-2 leading-relaxed mb-3.5 min-h-[32px]">' + safeBio + '</p>' +
+            '<div class="flex flex-wrap gap-1.5 mb-3.5">' +
+              '<span class="px-2.5 py-1 rounded-lg bg-teal-950/70 border border-teal-800/60 text-[11px] text-teal-300 font-medium">' + safeCat + '</span>' +
+              '<span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-[11px] text-slate-300">' + safeNiche + '</span>' +
             '</div>' +
           '</div>' +
-          '<div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">' +
-            '<div class="text-center">' +
-              '<div class="font-black text-white">' + safeFollowers + '</div>' +
-              '<div class="text-[10px] text-slate-500">فالوور</div>' +
+          '<div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">' +
+            '<div class="flex items-center gap-4">' +
+              '<div>' +
+                '<span class="text-[10px] text-slate-500 block">نرخ تعامل</span>' +
+                '<span class="font-black text-amber-400 text-xs sm:text-sm">' + safeEr + '</span>' +
+              '</div>' +
+              '<div class="border-r border-slate-800 pr-4">' +
+                '<span class="text-[10px] text-slate-500 block">امتیاز رادار</span>' +
+                '<span class="font-black text-sky-400 text-xs sm:text-sm">⭐ ' + safeScore + '</span>' +
+              '</div>' +
             '</div>' +
-            '<div class="text-center">' +
-              '<div class="font-black text-amber-400">' + safeEr + '</div>' +
-              '<div class="text-[10px] text-slate-500">نرخ تعامل</div>' +
-            '</div>' +
-            '<button onclick="openModal(\'' + b.id + '\')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-teal-600 hover:text-slate-950 text-slate-300 font-bold text-xs transition flex items-center gap-1">' +
-              '<span>تحلیل</span>' +
+            '<button onclick="openModal(\'' + b.id + '\')" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-teal-500 hover:text-slate-950 text-slate-200 font-bold text-xs transition-all shadow flex items-center gap-1.5">' +
+              '<span>شناسنامه و تحلیل</span>' +
               '<i class="fa-solid fa-arrow-left text-[10px]"></i>' +
             '</button>' +
           '</div>';
