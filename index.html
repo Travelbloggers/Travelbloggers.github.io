@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" class="dark">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>رادار بلاگران سفر، بوم‌گردی و جهانگردی ایران | TravelBloggers IR</title>
+  <meta name="description" content="دایرکتوری و رتبه‌بندی جامع بیش از ۱۵۰ بلاگر سفر، ماجراجویی، طبیعت‌گردی، ون‌لایف و بوم‌گردی ایران با تحلیل نرخ تعامل و شناسنامه آماری.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,17 +19,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Vazirmatn', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              teal: '#14b8a6',
-              amber: '#f59e0b',
-              sky: '#0284c7',
-              dark: '#050811',
-              card: '#0c1222',
-              border: '#1e293b'
-            }
+            sans: ['Vazirmatn', 'sans-serif'],
           }
         }
       }
@@ -38,240 +29,212 @@
   <style>
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background-color: #050811;
-      color: #f8fafc;
-      overflow-x: hidden;
+      background-color: #060913;
+      color: #f1f5f9;
+      margin: 0;
+      padding: 0;
     }
-    .glassmorphism {
-      background: rgba(12, 18, 34, 0.75);
+    .glass-nav {
+      background: rgba(10, 15, 29, 0.85);
       backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .glass-card {
-      background: linear-gradient(135deg, rgba(17, 24, 45, 0.8) 0%, rgba(12, 18, 34, 0.95) 100%);
+    .glass-box {
+      background: rgba(15, 23, 42, 0.7);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.07);
     }
-    .glass-card:hover {
-      border-color: rgba(20, 184, 166, 0.5);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px -10px rgba(20, 184, 166, 0.15);
+    .blogger-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      transition: all 0.25s ease-in-out;
     }
-    .hero-glow {
-      background: radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.18) 0%, rgba(245, 158, 11, 0.1) 45%, transparent 75%);
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #050811;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 6px;
+    .blogger-card:hover {
+      border-color: #14b8a6;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -5px rgba(20, 184, 166, 0.15);
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col custom-scrollbar antialiased selection:bg-teal-500 selection:text-slate-950">
+<body class="min-h-screen flex flex-col antialiased">
 
-  <!-- Navigation Bar -->
-  <header class="sticky top-0 z-50 glassmorphism border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center space-x-3.5 space-x-reverse">
-        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-500 via-sky-500 to-amber-500 p-0.5 shadow-lg shadow-teal-500/20 flex items-center justify-center">
-          <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-teal-400 font-black text-xl">
-            <i class="fa-solid fa-earth-americas"></i>
-          </div>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-teal-500 to-amber-500 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-teal-500/20">
+          <i class="fa-solid fa-earth-americas"></i>
         </div>
         <div>
-          <div class="flex items-center gap-2">
-            <h1 class="text-xl sm:text-2xl font-black bg-gradient-to-r from-teal-400 via-sky-400 to-amber-300 bg-clip-text text-transparent">
-              TravelBloggers IR
-            </h1>
-            <span class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-teal-950/80 text-teal-400 border border-teal-800/60">v2.0 Radar</span>
-          </div>
-          <p class="text-xs text-slate-400 font-medium hidden sm:block">مرجع تخصصی رصد، تحلیل و دایرکتوری بلاگران سفر و جهانگردی ایران</p>
+          <h1 class="text-xl font-black bg-gradient-to-r from-teal-400 via-sky-400 to-amber-300 bg-clip-text text-transparent">
+            TravelBloggers IR
+          </h1>
+          <p class="text-xs text-slate-400">مرجع و رادار هوشمند بلاگران سفر و جهانگردی ایران</p>
         </div>
       </div>
       
       <div class="flex items-center gap-3">
-        <a href="https://t.me/+obDeMlBbqdVjNWJk" target="_blank" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-400 hover:to-teal-500 text-slate-950 font-black text-xs sm:text-sm shadow-lg shadow-teal-500/25 transition-all flex items-center gap-2">
+        <a href="https://t.me/+obDeMlBbqdVjNWJk" target="_blank" class="px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md transition flex items-center gap-2">
           <i class="fa-brands fa-telegram text-base"></i>
-          <span class="hidden xs:inline">جامعه بلاگران سفر</span>
-          <span class="xs:hidden">گروه</span>
+          <span>گروه تلگرام</span>
         </a>
-        <a href="https://github.com/Travelbloggers/Travelbloggers.github.io" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700/80 transition flex items-center justify-center">
-          <i class="fa-brands fa-github text-lg"></i>
+        <a href="https://github.com/Travelbloggers/Travelbloggers.github.io" target="_blank" class="p-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center justify-center border border-slate-700">
+          <i class="fa-brands fa-github text-base"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with Deep Glow -->
-  <section class="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center">
-    <div class="absolute inset-0 -z-10 hero-glow filter blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-3xl mx-auto mb-10">
-      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-teal-500/30 text-teal-300 text-xs font-bold mb-5 shadow-inner">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
-        </span>
-        رصد برخط اکوسیستم سفر و گردشگری ایران
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-5 leading-tight">
-        کامل‌ترین دایرکتوری و تحلیل<br class="hidden sm:block">
-        <span class="bg-gradient-to-r from-teal-400 via-sky-300 to-amber-300 bg-clip-text text-transparent">راویان سفر و جهانگردی</span>
-      </h2>
-      <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-        دسترسی به شناسنامه، تحلیل تعامل، دسته‌بندی سبک‌های سفر، نقاط قوت محتوایی و اطلاعات تماس بیش از ۱۵۰ تولیدکننده محتوای تخصصی.
-      </p>
+  <!-- Hero Section -->
+  <section class="py-10 px-4 max-w-7xl mx-auto w-full text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-950/70 border border-teal-800/60 text-teal-400 text-xs font-semibold mb-4">
+      <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+      رصد برخط اکوسیستم سفر و گردشگری
     </div>
+    <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">
+      دایرکتوری و رتبه‌بندی راویان سفر و گردشگری ایران
+    </h2>
+    <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mb-8 leading-relaxed">
+      شناسنامه تحلیلی، نرخ تعامل، بررسی مخاطبان و دایرکتوری تخصصی تولیدکنندگان محتوای سفر.
+    </p>
 
-    <!-- Live Stats Metrics -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mb-10">
-      <div class="glassmorphism p-4 sm:p-5 rounded-2xl border border-slate-800">
-        <div class="text-2xl sm:text-3xl font-black text-teal-400" id="stat-total">۰</div>
-        <div class="text-xs text-slate-400 font-medium mt-1">بلاگر شناسایی شده</div>
+    <!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto mb-8">
+      <div class="glass-box p-4 rounded-2xl text-center">
+        <div class="text-2xl font-black text-teal-400" id="stat-total">۱۵۳</div>
+        <div class="text-xs text-slate-400 mt-1">تعداد بلاگران</div>
       </div>
-      <div class="glassmorphism p-4 sm:p-5 rounded-2xl border border-slate-800">
-        <div class="text-2xl sm:text-3xl font-black text-amber-400" id="stat-followers">۰</div>
-        <div class="text-xs text-slate-400 font-medium mt-1">مجموع مخاطبان فعال</div>
+      <div class="glass-box p-4 rounded-2xl text-center">
+        <div class="text-2xl font-black text-amber-400" id="stat-followers">۱۹.۸M</div>
+        <div class="text-xs text-slate-400 mt-1">مجموع مخاطبان</div>
       </div>
-      <div class="glassmorphism p-4 sm:p-5 rounded-2xl border border-slate-800">
-        <div class="text-2xl sm:text-3xl font-black text-sky-400">۵.۸٪</div>
-        <div class="text-xs text-slate-400 font-medium mt-1">میانگین نرخ تعامل (ER)</div>
+      <div class="glass-box p-4 rounded-2xl text-center">
+        <div class="text-2xl font-black text-sky-400">۵.۸٪</div>
+        <div class="text-xs text-slate-400 mt-1">میانگین تعامل (ER)</div>
       </div>
-      <div class="glassmorphism p-4 sm:p-5 rounded-2xl border border-slate-800">
-        <div class="text-2xl sm:text-3xl font-black text-emerald-400">۱۰۰٪</div>
-        <div class="text-xs text-slate-400 font-medium mt-1">عکس و هویت بصری تایید شده</div>
+      <div class="glass-box p-4 rounded-2xl text-center">
+        <div class="text-2xl font-black text-emerald-400">۱۰۰٪</div>
+        <div class="text-xs text-slate-400 mt-1">دارای تصویر تایید شده</div>
       </div>
     </div>
 
-    <!-- Search & Dynamic Filter Controls -->
-    <div class="glassmorphism p-3 sm:p-4 rounded-2xl border border-slate-800 max-w-5xl mx-auto flex flex-col md:flex-row gap-3 items-center justify-between">
-      <div class="relative w-full md:flex-1">
-        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3.5 text-slate-400 text-sm"></i>
+    <!-- Search & Filter Controls -->
+    <div class="glass-box p-3 sm:p-4 rounded-2xl max-w-4xl mx-auto flex flex-col sm:flex-row gap-3 items-center justify-between">
+      <div class="relative w-full sm:flex-1">
+        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3 text-slate-400 text-sm"></i>
         <input 
           type="text" 
           id="search-input" 
-          placeholder="جستجوی نام، آیدی اینستاگرام، شهر، کمپینگ، ون‌لایف..." 
-          class="w-full bg-slate-900/90 border border-slate-700/70 rounded-xl pr-10 pl-4 py-2.5 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition"
+          placeholder="جستجوی نام، آیدی اینستاگرام، شهر یا سبک سفر..." 
+          class="w-full bg-slate-900 border border-slate-700 rounded-xl pr-10 pl-4 py-2 text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-500 transition"
         >
       </div>
 
-      <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 w-full md:w-auto">
-        <select id="category-filter" class="w-full sm:w-auto bg-slate-900/90 border border-slate-700/70 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-teal-500 transition">
-          <option value="all">همه سبک‌های سفر</option>
+      <div class="flex items-center gap-2 w-full sm:w-auto">
+        <select id="category-filter" class="w-full sm:w-auto bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-300 focus:outline-none focus:border-teal-500 transition">
+          <option value="all">همه سبک‌ها</option>
           <option value="جهانگردی و ماجراجویی">جهانگردی و ماجراجویی</option>
           <option value="ایران‌گردی و بوم‌گردی">ایران‌گردی و بوم‌گردی</option>
           <option value="کمپینگ و طبیعت‌گردی">کمپینگ و طبیعت‌گردی</option>
-          <option value="سفر خانوادگی و دو‌نفره">سفر خانوادگی و دو‌نفره</option>
+          <option value="سفر خانوادگی و دو‌نفره">سفر خانوادگی و دونفره</option>
           <option value="روایتگری، پادکست و سفرنامه">روایتگری و پادکست سفر</option>
-          <option value="سفر، شکم‌گردی و فرهنگ بومی">شکم‌گردی و فرهنگ بومی</option>
+          <option value="سفر، شکم‌گردی و فرهنگ بومی">شکم‌گردی و بومی</option>
         </select>
 
-        <select id="sort-filter" class="w-full sm:w-auto bg-slate-900/90 border border-slate-700/70 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-teal-500 transition">
+        <select id="sort-filter" class="w-full sm:w-auto bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-300 focus:outline-none focus:border-teal-500 transition">
           <option value="followers">بیشترین فالوور</option>
-          <option value="score">بالاترین امتیاز رادار</option>
+          <option value="score">بالاترین امتیاز</option>
         </select>
       </div>
     </div>
   </section>
 
   <!-- Bloggers Grid Feed -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow mb-20">
-    <div id="bloggers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-      <!-- Injected via JavaScript -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 w-full flex-grow mb-16">
+    <div id="bloggers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Injected by JavaScript -->
     </div>
     
-    <div id="no-results" class="hidden text-center py-20">
-      <div class="w-16 h-16 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4 text-slate-500 text-2xl">
-        <i class="fa-solid fa-compass"></i>
-      </div>
-      <h3 class="text-white font-bold text-base mb-1">بلاگری با این مشخصات یافت نشد</h3>
-      <p class="text-slate-500 text-xs">کلمه کلیدی دیگری جستجو کنید یا فیلتر دسته‌بندی را تغییر دهید.</p>
+    <div id="no-results" class="hidden text-center py-16">
+      <i class="fa-solid fa-compass text-3xl text-slate-600 mb-2"></i>
+      <p class="text-slate-400 text-xs sm:text-sm">هیچ موردی یافت نشد.</p>
     </div>
   </main>
 
-  <!-- Deep Analysis Modal -->
-  <div id="details-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
-    <div class="glassmorphism max-w-2xl w-full rounded-3xl border border-slate-700/80 p-5 sm:p-8 max-h-[90vh] overflow-y-auto custom-scrollbar relative shadow-2xl">
-      <button id="close-modal" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-slate-800/80 text-slate-400 hover:text-white flex items-center justify-center transition">
-        <i class="fa-solid fa-xmark text-base"></i>
+  <!-- Modal -->
+  <div id="details-modal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-slate-900 max-w-xl w-full rounded-2xl border border-slate-700 p-6 max-h-[85vh] overflow-y-auto relative text-right">
+      <button id="close-modal" class="absolute top-4 left-4 text-slate-400 hover:text-white p-1 text-lg">
+        <i class="fa-solid fa-xmark"></i>
       </button>
-
-      <div id="modal-content">
-        <!-- Injected dynamically -->
-      </div>
+      <div id="modal-content"></div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="glassmorphism border-t border-slate-800/80 mt-auto py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-teal-500"></span>
-        <span>توسعه یافته در اکوسیستم جامعه بلاگرهای ایران • پاییز ۲۰۲۶</span>
-      </div>
+  <footer class="glass-nav mt-auto py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <div>اکوسیستم جامعه بلاگرهای ایران • پاییز ۲۰۲۶</div>
       <div class="flex items-center gap-4">
-        <a href="https://t.me/+obDeMlBbqdVjNWJk" target="_blank" class="text-slate-400 hover:text-teal-400 transition">گروه تلگرام</a>
+        <a href="https://t.me/+obDeMlBbqdVjNWJk" target="_blank" class="hover:text-teal-400 transition">گروه تلگرام</a>
         <span>•</span>
-        <a href="https://github.com/Travelbloggers/Travelbloggers.github.io" target="_blank" class="text-slate-400 hover:text-teal-400 transition">ریپازیتوری گیت‌هاب</a>
+        <a href="https://github.com/Travelbloggers/Travelbloggers.github.io" target="_blank" class="hover:text-teal-400 transition">گیت‌هاب</a>
       </div>
     </div>
   </footer>
 
   <script>
-    let allBloggers = [];
+    var allBloggers = [];
 
-    const getFallbackAvatar = (name) => {
-      const initial = (name || 'T').charAt(0).toUpperCase();
-      return `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><rect width="100%" height="100%" fill="%230d9488"/><text x="50%" y="55%" font-size="44" font-weight="bold" fill="%23ffffff" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif">${encodeURIComponent(initial)}</text></svg>`;
-    };
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
 
-    async function loadData() {
-      try {
-        const res = await fetch('bloggers.json');
-        allBloggers = await res.json();
-        
-        document.getElementById('stat-total').innerText = allBloggers.length.toLocaleString('fa-IR');
-        const totalFollowers = allBloggers.reduce((acc, curr) => acc + (curr.followers_count || 0), 0);
-        document.getElementById('stat-followers').innerText = (totalFollowers / 1000000).toFixed(1) + 'M';
+    function getFallbackSvg(name) {
+      var initial = (name || 'T').charAt(0).toUpperCase();
+      return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><rect width='100%' height='100%' fill='%230d9488'/><text x='50%' y='55%' font-size='44' font-weight='bold' fill='%23ffffff' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif'>" + encodeURIComponent(initial) + "</text></svg>";
+    }
 
-        renderBloggers();
-      } catch (e) {
-        console.error('Error loading bloggers:', e);
-      }
+    function loadData() {
+      fetch('bloggers.json')
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          allBloggers = data;
+          document.getElementById('stat-total').innerText = allBloggers.length.toLocaleString('fa-IR');
+          var totalFollowers = allBloggers.reduce(function(acc, curr) { return acc + (curr.followers_count || 0); }, 0);
+          document.getElementById('stat-followers').innerText = (totalFollowers / 1000000).toFixed(1) + 'M';
+          renderBloggers();
+        })
+        .catch(function(err) {
+          console.error('Error fetching bloggers.json:', err);
+        });
     }
 
     function renderBloggers() {
-      const query = document.getElementById('search-input').value.toLowerCase().trim();
-      const cat = document.getElementById('category-filter').value;
-      const sort = document.getElementById('sort-filter').value;
+      var query = document.getElementById('search-input').value.toLowerCase().trim();
+      var cat = document.getElementById('category-filter').value;
+      var sort = document.getElementById('sort-filter').value;
 
-      let filtered = allBloggers.filter(b => {
-        const matchesQuery = 
-          (b.name && b.name.toLowerCase().includes(query)) || 
-          (b.instagram && b.instagram.toLowerCase().includes(query)) ||
-          (b.category && b.category.toLowerCase().includes(query)) ||
-          (b.bio && b.bio.toLowerCase().includes(query)) ||
-          (b.tags && b.tags.some(t => t.toLowerCase().includes(query)));
+      var filtered = allBloggers.filter(function(b) {
+        var matchesQuery = 
+          (b.name && b.name.toLowerCase().indexOf(query) !== -1) || 
+          (b.instagram && b.instagram.toLowerCase().indexOf(query) !== -1) ||
+          (b.category && b.category.toLowerCase().indexOf(query) !== -1) ||
+          (b.bio && b.bio.toLowerCase().indexOf(query) !== -1);
 
-        const matchesCat = (cat === 'all') || (b.category === cat);
+        var matchesCat = (cat === 'all') || (b.category === cat);
         return matchesQuery && matchesCat;
       });
 
       if (sort === 'followers') {
-        filtered.sort((a, b) => (b.followers_count || 0) - (a.followers_count || 0));
+        filtered.sort(function(a, b) { return (b.followers_count || 0) - (a.followers_count || 0); });
       } else if (sort === 'score') {
-        filtered.sort((a, b) => (b.score || 0) - (a.score || 0));
+        filtered.sort(function(a, b) { return (b.score || 0) - (a.score || 0); });
       }
 
-      const grid = document.getElementById('bloggers-grid');
-      const noResults = document.getElementById('no-results');
+      var grid = document.getElementById('bloggers-grid');
+      var noResults = document.getElementById('no-results');
 
       grid.innerHTML = '';
       if (filtered.length === 0) {
@@ -280,145 +243,122 @@
       }
       noResults.classList.add('hidden');
 
-      filtered.forEach((b, index) => {
-        const card = document.createElement('div');
-        card.className = "glass-card rounded-2xl p-5 flex flex-col justify-between group";
+      filtered.forEach(function(b, index) {
+        var card = document.createElement('div');
+        card.className = "blogger-card rounded-2xl p-4 flex flex-col justify-between";
         
-        const avatarSrc = b.avatar || getFallbackAvatar(b.name);
+        var avatarSrc = b.avatar || getFallbackSvg(b.name);
+        var safeName = escapeHtml(b.name);
+        var safeUser = escapeHtml(b.instagram);
+        var safeBio = escapeHtml(b.bio || 'تولیدکننده تخصصی محتوا در حوزه سفر و گردشگری');
+        var safeCat = escapeHtml(b.category || 'گردشگری');
+        var safeNiche = escapeHtml(b.niche || 'سفر');
+        var safeScore = escapeHtml(b.score || '8.8');
+        var safeFollowers = escapeHtml(b.followers_formatted || '100K');
+        var safeEr = escapeHtml(b.engagement_rate || '5.5%');
 
-        card.innerHTML = `
-          <div>
-            <div class="flex items-start justify-between gap-3 mb-4">
-              <div class="flex items-center gap-3">
-                <div class="relative">
-                  <img 
-                    src="${avatarSrc}" 
-                    onerror="this.onerror=null; this.src='${getFallbackAvatar(b.name)}';" 
-                    alt="${b.name}" 
-                    class="w-14 h-14 rounded-2xl object-cover border border-slate-700/80 group-hover:border-teal-400 transition"
-                  >
-                  <div class="absolute -bottom-1.5 -right-1.5 bg-gradient-to-tr from-teal-500 to-amber-400 text-slate-950 font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-900 shadow">
-                    ${index + 1}
-                  </div>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white text-base leading-tight group-hover:text-teal-300 transition line-clamp-1">${b.name}</h3>
-                  <a href="https://instagram.com/${b.instagram}" target="_blank" class="text-xs text-slate-400 hover:text-teal-400 transition flex items-center gap-1 mt-0.5" dir="ltr">
-                    <i class="fa-brands fa-instagram text-teal-400"></i>
-                    @${b.instagram}
-                  </a>
-                </div>
-              </div>
-              <div class="px-2.5 py-1 rounded-lg bg-teal-950/70 border border-teal-700/50 text-teal-300 font-extrabold text-xs">
-                ⭐ ${b.score || '8.8'}
-              </div>
-            </div>
-
-            <p class="text-xs text-slate-300/80 line-clamp-2 leading-relaxed mb-4">
-              ${b.bio || 'تولیدکننده تخصصی محتوا در حوزه گردشگری، معرفی دیدنی‌ها و تجربیات سفر'}
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="px-2.5 py-0.5 rounded-md bg-slate-900/90 border border-slate-800 text-[11px] text-teal-400 font-medium">${b.category}</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-slate-900/60 text-[11px] text-slate-400">${b.niche || 'سفر و گردشگری'}</span>
-            </div>
-          </div>
-
-          <div class="pt-3.5 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <div class="text-center">
-              <div class="font-black text-white text-sm">${b.followers_formatted || '100K'}</div>
-              <div class="text-[10px] text-slate-500 font-medium">فالوور</div>
-            </div>
-            <div class="text-center">
-              <div class="font-black text-amber-400 text-sm">${b.engagement_rate || '5.5%'}</div>
-              <div class="text-[10px] text-slate-500 font-medium">نرخ تعامل</div>
-            </div>
-            <button onclick="openModal('${b.id}')" class="px-3.5 py-1.5 rounded-xl bg-slate-800/90 hover:bg-teal-500 hover:text-slate-950 text-slate-200 font-bold text-xs transition-all flex items-center gap-1.5">
-              <span>تحلیل</span>
-              <i class="fa-solid fa-arrow-left text-[10px]"></i>
-            </button>
-          </div>
-        `;
+        card.innerHTML = 
+          '<div>' +
+            '<div class="flex items-start justify-between gap-3 mb-3">' +
+              '<div class="flex items-center gap-3">' +
+                '<div class="relative">' +
+                  '<img src="' + avatarSrc + '" onerror="this.src=\'' + getFallbackSvg(b.name) + '\';" alt="' + safeName + '" class="w-12 h-12 rounded-xl object-cover border border-slate-700">' +
+                  '<div class="absolute -bottom-1 -right-1 bg-teal-500 text-slate-950 font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center">' + (index + 1) + '</div>' +
+                '</div>' +
+                '<div>' +
+                  '<h3 class="font-bold text-white text-sm line-clamp-1">' + safeName + '</h3>' +
+                  '<a href="https://instagram.com/' + safeUser + '" target="_blank" class="text-xs text-slate-400 hover:text-teal-400 transition flex items-center gap-1 mt-0.5" dir="ltr">' +
+                    '<i class="fa-brands fa-instagram text-teal-400"></i> @' + safeUser +
+                  '</a>' +
+                '</div>' +
+              '</div>' +
+              '<div class="px-2 py-0.5 rounded bg-teal-950 border border-teal-800 text-teal-300 font-bold text-xs">' +
+                '⭐ ' + safeScore +
+              '</div>' +
+            '</div>' +
+            '<p class="text-xs text-slate-400 line-clamp-2 leading-relaxed mb-3">' + safeBio + '</p>' +
+            '<div class="flex flex-wrap gap-1 mb-3">' +
+              '<span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-teal-400 font-medium">' + safeCat + '</span>' +
+              '<span class="px-2 py-0.5 rounded bg-slate-800/60 text-[10px] text-slate-400">' + safeNiche + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">' +
+            '<div class="text-center">' +
+              '<div class="font-black text-white">' + safeFollowers + '</div>' +
+              '<div class="text-[10px] text-slate-500">فالوور</div>' +
+            '</div>' +
+            '<div class="text-center">' +
+              '<div class="font-black text-amber-400">' + safeEr + '</div>' +
+              '<div class="text-[10px] text-slate-500">نرخ تعامل</div>' +
+            '</div>' +
+            '<button onclick="openModal(\'' + b.id + '\')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-teal-600 hover:text-slate-950 text-slate-300 font-bold text-xs transition flex items-center gap-1">' +
+              '<span>تحلیل</span>' +
+              '<i class="fa-solid fa-arrow-left text-[10px]"></i>' +
+            '</button>' +
+          '</div>';
+        
         grid.appendChild(card);
       });
     }
 
     function openModal(id) {
-      const b = allBloggers.find(item => item.id === id);
+      var b = allBloggers.find(function(item) { return item.id === id; });
       if (!b) return;
 
-      const modalContent = document.getElementById('modal-content');
-      modalContent.innerHTML = `
-        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-slate-800">
-          <img src="${b.avatar || getFallbackAvatar(b.name)}" onerror="this.src='${getFallbackAvatar(b.name)}';" class="w-20 h-20 rounded-2xl object-cover border border-teal-500/80 shadow-lg">
-          <div>
-            <h2 class="text-xl font-black text-white">${b.name}</h2>
-            <div class="text-sm text-teal-400 font-mono mt-0.5" dir="ltr">@${b.instagram}</div>
-            <div class="inline-block mt-2 px-3 py-0.5 rounded-full bg-teal-950 border border-teal-800 text-teal-300 text-xs font-semibold">
-              ${b.category}
-            </div>
-          </div>
-        </div>
+      var modalContent = document.getElementById('modal-content');
+      var safeName = escapeHtml(b.name);
+      var safeUser = escapeHtml(b.instagram);
+      var safeCat = escapeHtml(b.category);
+      var safeFollowers = escapeHtml(b.followers_formatted || '100K');
+      var safeEr = escapeHtml(b.engagement_rate || '5.8%');
+      var safePosts = escapeHtml(b.posts_count || '-');
+      var safeStrengths = escapeHtml(b.analysis ? b.analysis.strengths : 'تولید محتوای باکیفیت و مداوم');
+      var safeMonetization = escapeHtml(b.analysis ? b.analysis.monetization : 'معرفی اقامتگاه‌ها و تورهای مسافرتی');
+      var avatarSrc = b.avatar || getFallbackSvg(b.name);
 
-        <div class="grid grid-cols-3 gap-3 mb-6 text-center">
-          <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-800">
-            <div class="text-lg font-black text-white">${b.followers_formatted || '100K'}</div>
-            <div class="text-xs text-slate-500 font-medium">مخاطبان</div>
-          </div>
-          <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-800">
-            <div class="text-lg font-black text-amber-400">${b.engagement_rate || '5.8%'}</div>
-            <div class="text-xs text-slate-500 font-medium">نرخ تعامل</div>
-          </div>
-          <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-800">
-            <div class="text-lg font-black text-sky-400">${b.posts_count || '150'}</div>
-            <div class="text-xs text-slate-500 font-medium">پست‌ها</div>
-          </div>
-        </div>
-
-        <div class="space-y-4 text-xs text-slate-300">
-          <div>
-            <h4 class="font-bold text-white mb-1.5 flex items-center gap-2">
-              <i class="fa-solid fa-bullseye text-teal-400"></i>
-              نقاط قوت و استراتژی محتوایی:
-            </h4>
-            <p class="text-slate-400 leading-relaxed bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800/80">
-              ${b.analysis ? b.analysis.strengths : 'تولید محتوای مستمر، عکاسی و مستندسازی حرفه‌ای لوکیشن‌های بکر.'}
-            </p>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-white mb-1.5 flex items-center gap-2">
-              <i class="fa-solid fa-film text-amber-400"></i>
-              فرمت‌های برتر و پربازدید:
-            </h4>
-            <ul class="list-disc list-inside text-slate-400 space-y-1.5 bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800/80">
-              ${b.analysis && b.analysis.top_formats ? b.analysis.top_formats.map(f => `<li>${f}</li>`).join('') : '<li>ریلزهای مستند و معرفی لوکیشن‌های بکر</li><li>راهنمای بودجه و اقامتگاه</li>'}
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-white mb-1.5 flex items-center gap-2">
-              <i class="fa-solid fa-handshake text-sky-400"></i>
-              ظرفیت‌های همکاری تجاری و تبلیغاتی:
-            </h4>
-            <p class="text-slate-400 leading-relaxed bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800/80">
-              ${b.analysis ? b.analysis.monetization : 'معرفی اقامتگاه‌ها، تجهیزات کمپینگ، آژانس‌های گردشگری و بلیت‌های مسافرتی.'}
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-6 pt-5 border-t border-slate-800 flex justify-end gap-3">
-          <a href="https://instagram.com/${b.instagram}" target="_blank" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-amber-500 text-slate-950 font-black text-xs flex items-center gap-2 shadow-lg shadow-teal-500/20 hover:opacity-90 transition">
-            <i class="fa-brands fa-instagram text-sm"></i>
-            مشاهده پیج در اینستاگرام
-          </a>
-        </div>
-      `;
+      modalContent.innerHTML = 
+        '<div class="flex items-center gap-3 mb-5 pb-4 border-b border-slate-800">' +
+          '<img src="' + avatarSrc + '" onerror="this.src=\'' + getFallbackSvg(b.name) + '\';" class="w-16 h-16 rounded-xl object-cover border border-teal-500">' +
+          '<div>' +
+            '<h2 class="text-lg font-black text-white">' + safeName + '</h2>' +
+            '<div class="text-xs text-teal-400 font-mono mt-0.5" dir="ltr">@' + safeUser + '</div>' +
+            '<div class="inline-block mt-1 px-2.5 py-0.5 rounded-full bg-teal-950 border border-teal-800 text-teal-300 text-[10px] font-semibold">' + safeCat + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="grid grid-cols-3 gap-2 mb-4 text-center">' +
+          '<div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">' +
+            '<div class="text-sm font-black text-white">' + safeFollowers + '</div>' +
+            '<div class="text-[10px] text-slate-400">مخاطبان</div>' +
+          '</div>' +
+          '<div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">' +
+            '<div class="text-sm font-black text-amber-400">' + safeEr + '</div>' +
+            '<div class="text-[10px] text-slate-400">نرخ تعامل</div>' +
+          '</div>' +
+          '<div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">' +
+            '<div class="text-sm font-black text-sky-400">' + safePosts + '</div>' +
+            '<div class="text-[10px] text-slate-400">تعداد پست</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="space-y-3 text-xs text-slate-300">' +
+          '<div>' +
+            '<h4 class="font-bold text-white mb-1 flex items-center gap-1.5"><i class="fa-solid fa-bullseye text-teal-400"></i> نقاط قوت محتوایی:</h4>' +
+            '<p class="text-slate-400 leading-relaxed bg-slate-800/50 p-2.5 rounded-xl border border-slate-700/60">' + safeStrengths + '</p>' +
+          '</div>' +
+          '<div>' +
+            '<h4 class="font-bold text-white mb-1 flex items-center gap-1.5"><i class="fa-solid fa-handshake text-sky-400"></i> ظرفیت‌های تبلیغاتی:</h4>' +
+            '<p class="text-slate-400 leading-relaxed bg-slate-800/50 p-2.5 rounded-xl border border-slate-700/60">' + safeMonetization + '</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="mt-5 pt-3 border-t border-slate-800 flex justify-end">' +
+          '<a href="https://instagram.com/' + safeUser + '" target="_blank" class="px-4 py-2 rounded-xl bg-gradient-to-r from-teal-500 to-amber-500 text-slate-950 font-bold text-xs flex items-center gap-1.5">' +
+            '<i class="fa-brands fa-instagram"></i> مشاهده در اینستاگرام' +
+          '</a>' +
+        '</div>';
 
       document.getElementById('details-modal').classList.remove('hidden');
     }
 
-    document.getElementById('close-modal').onclick = () => {
+    document.getElementById('close-modal').onclick = function() {
       document.getElementById('details-modal').classList.add('hidden');
     };
 
